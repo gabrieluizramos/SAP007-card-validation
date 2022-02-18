@@ -1,0 +1,92 @@
+@import url("https://gabrieluizramos.com.br/theme/main.css");
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header {
+  padding: var(--spacing-double);
+}
+
+.content {
+  padding: var(--spacing-double);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background: var(--color-post-background);
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: var(--spacing-double);
+}
+
+.card {
+  width: 450px;
+  height: 250px;
+  background: var(--color-terminal-purple);
+  border-radius: var(--radius-default);
+  box-shadow: var(--shadow-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: tilt infinite 2s;
+  margin-bottom: var(--spacing-double);
+}
+
+.card-number {
+  background: transparent;
+  border-bottom: 2px solid var(--color-white);
+  text-align: center;
+  padding: var(--spacing-half);
+  color: var(--color-white);
+}
+
+@keyframes tilt {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+.button {
+  background: var(--color-terminal-yellow);
+  padding: var(--spacing-default);
+  border-radius: var(--radius-half);
+  cursor: pointer;
+}
+
+[data-valid="true"] .message.valid {
+  display: block;
+}
+
+[data-valid="false"] .message.invalid {
+  display: block;
+}
+
+.message {
+  padding: var(--spacing-default);
+  border: 2px solid;
+  text-align: center;
+  display: none;
+  transition: var(--transition-default);
+}
+.message.valid {
+  border-color: var(--color-terminal-green);
+}
+
+.message.invalid {
+  border-color: var(--color-red);
+}
