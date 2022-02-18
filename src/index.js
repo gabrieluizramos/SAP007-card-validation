@@ -9,5 +9,7 @@ form.addEventListener('submit', (e) => {
 
   const value = input.value;
   const isValid = validator.isValid(value);
+  // Usa o retorno da função isValid (true/false)
+  // para colocar no data-valid="" do elemento com a mensagem
   div.dataset.valid = isValid;
 });

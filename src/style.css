@@ -1,5 +1,7 @@
+/* Importa "tema" geral com cores e algumas pequenas predefinições de estilo baseadas no meu site */
 @import url("https://gabrieluizramos.com.br/theme/main.css");
 
+/* Geral e contaúdo */
 body {
   display: flex;
   align-items: center;
@@ -21,6 +23,7 @@ body {
   background: var(--color-post-background);
 }
 
+/* Formulário e cartão */
 .form {
   display: flex;
   align-items: center;
@@ -56,10 +59,9 @@ body {
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translateY(var(--spacing-default));
   }
 }
-
 
 .button {
   background: var(--color-terminal-yellow);
@@ -68,10 +70,8 @@ body {
   cursor: pointer;
 }
 
-[data-valid="true"] .message.valid {
-  display: block;
-}
-
+/* Mensagens de resultado */
+[data-valid="true"] .message.valid,
 [data-valid="false"] .message.invalid {
   display: block;
 }
@@ -83,6 +83,7 @@ body {
   display: none;
   transition: var(--transition-default);
 }
+
 .message.valid {
   border-color: var(--color-terminal-green);
 }
